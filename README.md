@@ -43,7 +43,7 @@ currency-converter-java/build/libs/
 И запустите:
 
 ```
-java -jar currency-converter-java-0.1.0.jar
+currency-converter-java-0.1.0.jar
 ```
 
 ### 🌐 Шаг 3: Работа с веб-интерфейсом
