@@ -1,0 +1,7 @@
+app:
+  openexchangerates:
+    url: https://openexchangerates.org/api/latest.json
+    app_id: c86d56b469f64f488acc849d0e5b6c1e
+
+server:
+  port: 8080

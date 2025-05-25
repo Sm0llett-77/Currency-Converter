@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Exchange</title>
+</head>
+<body>
+<h2>Currency Exchange Rate</h2>
+<form method="get" action="/rate">
+    <label for="from">From:</label>
+    <select name="from" id="from">
+        <option th:each="c : ${currencies}" th:value="${c}" th:text="${c}"></option>
+    </select>
+
+    <label for="to">To:</label>
+    <select name="to" id="to">
+        <option th:each="c : ${currencies}" th:value="${c}" th:text="${c}"></option>
+    </select>
+
+    <button type="submit">Get Rate</button>
+</form>
+
+<p th:if="${rate != null}">
+    Exchange rate: <span th:text="${rate}"></span>
+</p>
+
+<form method="post" action="/shutdown">
+    <button type="submit">Shutdown Server</button>
+</form>
+</body>
+</html>
